@@ -1,0 +1,247 @@
+/* cart.css */
+
+/* General styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling (same as in index.html) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+}
+
+header .navbar a:hover {
+    color: var(--orange);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--orange);
+}
+
+/* Cart section */
+.cart {
+    padding: 80px 9% 40px; /* Adjust padding to account for fixed header */
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart .heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: var(--black);
+    padding: 1rem;
+}
+
+.cart .heading span {
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item .content {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.cart-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.cart-item button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    background-color: var(--orange);
+    color: rgb(39, 1, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+    background-color: #e67e22;
+}
+
+.cart-total {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cart-total h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.cart-total .btn {
+    padding: 12px 20px;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-total .btn:hover {
+    background-color: #e67e22;
+}
+
+.cart-total .btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Empty cart message */
+.cart-container p {
+    font-size: 18px;
+    text-align: center;
+    color: #888;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-bar {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        width: 100%;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+    }
+
+    header .navbar.active {
+        left: 0;
+    }
+
+    header .navbar a {
+        font-size: 2rem;
+        background: #fff;
+        border: .1rem solid var(--black);
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        display: block;
+        text-align: center;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        margin-bottom: 15px;
+    }
+
+    .cart-item .content {
+        padding-left: 0;
+    }
+
+    .cart-total h3 {
+        font-size: 18px;
+    }
+
+    .cart-total .btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 50%;
+    }
+
+    .cart-item .content h3 {
+        font-size: 1.8rem;
+    }
+
+    .cart-item p {
+        font-size: 1.4rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Shoe Shop</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<!-- header section starts -->
+<header>
+    <a href="index.html" class="logo">Shoe Shop</a>
+
+    <nav class="navbar">
+        <a href="index.html#home">home</a>
+        <a href="index.html#featured">featured</a>
+        <a href="index.html#review">review</a>
+    </nav>
+
+    <div class="icons">
+        <a href="cart.html" class="fas fa-shopping-cart">
+            <span id="cartCount">0</span>
+        </a>
+    </div>
+</header>
+<!-- header section ends -->
+
+<!-- cart section starts -->
+<section class="cart" id="cart">
+    <h1 class="heading">Your <span>Cart</span></h1>
+
+    <div class="cart-container" id="cartContainer">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+
+    <div class="cart-total">
+        <h3>Total: ₹<span id="totalAmount">0</span></h3>
+        <button id="clearCart" class="btn">Clear Cart</button>
+    </div>
+</section>
+<!-- cart section ends -->
+
+<!-- Load cart.js -->
+<script src="cart.js"></script>
+</body>
+</html>
